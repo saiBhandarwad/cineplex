@@ -1,0 +1,75 @@
+.header{
+    height: 4em;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+    z-index: 9999;
+    transition: all 0.5s ease-in-out;
+}
+.nav{
+    height: 4em;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    height: 10px;
+    cursor: pointer;
+}
+.menuItem{
+    margin: 0 15px ;
+    cursor: pointer;
+    color: white;
+}
+.menuItem:hover{
+    color: rgb(255, 65, 65);
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.show{
+    background: rgba(0, 0, 0, 1) ;
+}
+.hide{
+    transform: translateY(-70px);
+}
+.mobileMenu div{
+   
+    padding: 1em;
+    font-size: 1.25em;
+}
+.mobileMenu{
+    border-top: 1px solid rgb(109, 109, 109);
+    background: #000000;
+    transition: all 0.3s ease-in-out;
+}
+.hideMobileMenu{
+    transform: translateY(-190px);
+}
+.showMobileMenu{
+    transform: translateY(0px);
+}
+.searchBar{
+    text-align: center;
+    background: white;
+    width: 100vw;
+    height: 3.5em;
+    transition: all .25s ease-in-out;
+}
+.searchBar input{
+    width: 77%;
+    height: 100%;
+    outline: none;
+    font-size: larger;
+    border: none;
+}
+.hideSearchBar{
+    transform: translateY(-245px);
+}
+.showSearchBar{
+    transform: translateY(-120px);
+}

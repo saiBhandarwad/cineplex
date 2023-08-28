@@ -29,7 +29,7 @@ export default function HeroBanner() {
     <>
       <div className="heroBanner">
         {!loading && <div className='backdropImg'>
-          <Img src={background} />
+          <img src={background} alt="" loading='lazy'/>
         </div>}
         <ContentWrapper>
           <div className='heroText'>
@@ -43,8 +43,8 @@ export default function HeroBanner() {
               placeholder='Search for a movie or tv show....'
             />
             <button className='heroSearchBtn'>search</button>
+            <div className="opacityLayer"></div>
           </div>
-          <div className="opacityLayer"></div>
         </ContentWrapper>
       </div>
     </>

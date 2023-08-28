@@ -1,74 +1,149 @@
-.heroBanner{
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+.heroBanner {
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
-.heroHeading{
-    font-size: 6em;
+.heroHeading {
+  font-size: 5.5em;
 }
-.heroText span{
-    font-size: 1.5rem;
-    margin: 10px 0;
+.heroText span {
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
-.heroText{
-    margin: 10px;
+.heroText {
+  margin: 10px;
 }
-.contentWrapper{
-    z-index: 1;
-    position: absolute;
-    top: 32%;
+.contentWrapper {
+  margin-left: 0;
+  z-index: 99;
 }
-.backdropImg Img{
-    position: absolute;
-    top: -300px;
-    left: -770px;
-    height: 95vh;
-    width: 100vw;
-    z-index: -999;
-    overflow: hidden;
-    // object-fit: cover;
-    object-position: center;
-   
+.backdropImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
 }
-.backdropImg{
-    opacity: 0.5;
+.backdropImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  height: 93vh;
+  z-index: -1;
 }
-.heroSearch{
-    margin: 3em 0;
+.heroSearch {
+  margin: 3em 0;
 }
-.heroInput{
-    width: 60%;
-    height: 3.5rem;
-    border-radius: 2rem 0 0 2rem;
-    outline: none;
-    border: none;
-    padding: 0.5em 1.4em;
-    font-size: 1.3em;
-    letter-spacing: 2px;
+.heroInput {
+  width: 55%;
+  height: 3em;
+  border-radius: 2rem 0 0 2rem;
+  outline: none;
+  border: none;
+  padding: 0.5em 1.4em;
+  font-size: 1.3em;
+  letter-spacing: 2px;
 }
-.heroSearchBtn{
-    height: 3.5rem;
-    width: 10%;
-    border-radius: 0 2rem 2rem 0;
-    outline: none;
-    border: none;
-    font-size: 1.3em;
-    background-image: linear-gradient(45deg,rgb(252, 170, 29),rgb(255, 8, 148));
-    cursor: pointer;
+.heroSearchBtn {
+  height: 3em;
+  width: 12.5%;
+  border-radius: 0 2rem 2rem 0;
+  outline: none;
+  border: none;
+  font-size: 1.3em;
+  background-image: linear-gradient(45deg, rgb(252, 170, 29), rgb(255, 8, 148));
+  cursor: pointer;
+  color: white;
 }
-.opacityLayer{
-    background-image: linear-gradient(180deg,rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
-    height: 15em;
-    width: 100vw;
-    position: absolute;
-    left: -160px;
-    bottom: -185px;
+.opacityLayer {
+  background-image: linear-gradient(
+    180deg,
+    rgba(4, 21, 45, 0) 0%,
+    #04152d 59.17%,
+  );
+  height: 10em;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-@media screen and (max-width : 768px){
-    .heroBanner{
-        background: #000;
+@media screen and (max-width: 800px) {
+      .heroHeading {
+        font-size: 4em;
+      }
+      .heroText span {
+        font-size: 1.25em;
+        margin: 5px 0;
+      }
+      .heroText {
+        margin: 5px;
+      }
+      .heroSearch {
+        margin: 2em 0;
+      }
+      .heroInput {
+        width: 55%;
+        height: 2.5em;
+        letter-spacing: 0px;
+      }
+      .heroSearchBtn {
+        height: 2.5em;
+        width: 12.5%;
+      }
+}
+@media screen and (max-width: 600px) {
+      .heroHeading {
+        font-size: 3.5em;
+      }
+      .heroText span {
+        font-size: 1em;
+        margin: 2.5px 0;
+      }
+      .heroText {
+        margin: 2.5px;
+      }
+      .heroSearch {
+        margin: 1.5em 0;
+      }
+      .heroInput {
+        width: 70%;
+        height: 2em;
+        font-size: 1.2em;
+        letter-spacing: 0px;
     }
+    .heroSearchBtn {
+        height: 2em;
+        width: 15%;
+        font-size: 1.2em;
+      }
+
+      .backdropImg img {
+        object-fit: inherit;
+        object-position: center;
+      }
+}
+@media screen and (max-width: 500px) {
+    .heroText span {
+        font-size: 0.8em;
+      }
+      .heroInput {
+        width: 70%;
+        height: 2em;
+        font-size: 1em;
+    }
+    .heroSearchBtn {
+        height: 2em;
+        width: 20%;
+        font-size: 1em;
+      }
 }

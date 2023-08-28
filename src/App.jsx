@@ -13,7 +13,6 @@ import SearchResult from './pages/searchResult/SearchResult'
 import Explore from './pages/explore/Explore'
 import PageNotFound from './pages/404/NotFound'
 
-
 function App() {
   const dispatch = useDispatch()
 
@@ -39,6 +38,7 @@ function App() {
   return (
 
     <BrowserRouter>
+    <Header />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/:mediaType/:id' element={<Details/>}/>
