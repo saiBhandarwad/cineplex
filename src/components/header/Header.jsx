@@ -14,19 +14,24 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0)
 
   const handleScroll = () => {
-    if (window.scrollY < 200) {
-      setShow('')
-    }
-    else if (window.scrollY > lastScrollY) {
-      setLastScrollY(window.scrollY);
-      if (window.scrollY > 200) {
-        setShow('hide')
-      } else {
+    if (showMobileMenu === 'showMobileMenu' || showSearchBar === 'showSearchBar') {
+        setShow('show')
+    } else {
+      if (window.scrollY < 200) {
         setShow('')
       }
-    } else {
-      setShow('show')
+      else if (window.scrollY > lastScrollY) {
+        setLastScrollY(window.scrollY);
+        if (window.scrollY > 200) {
+          setShow('hide')
+        } else {
+          setShow('')
+        }
+      } else {
+        setShow('show')
+      }
     }
+
   }
 
   const handleMobileMenu = () => {
@@ -41,13 +46,20 @@ export default function Header() {
     }
   }
 
-  const handleSearchBar = () =>{
+  const handleSearchBar = () => {
+    setMobileMenu(false)
+    setShow('')
     setShowMobileMenu('hideMobileMenu')
-    if(showSearchBar === 'hideSearchBar'){
+    if (showSearchBar === 'hideSearchBar') {
       setShowSearchBar('showSearchBar')
-    }else{
+    } else {
       setShowSearchBar('hideSearchBar')
     }
+  }
+  const handleMdClose = () => {
+    setShowSearchBar('hideSearchBar')
+    setMobileMenu(false)
+    setShow('')
   }
   document.addEventListener('scroll', handleScroll)
 
@@ -56,10 +68,12 @@ export default function Header() {
       <div className='nav'>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwWTRH4c50TLs3tDs2BwGU6hH9bjgR0Qw0GQ&usqp=CAU' alt="" className='logo' />
 
-        {mdScreen < 800 ? <span className='menuItem'> <span className='menuItem'><HiOutlineSearch onClick={handleSearchBar}/></span> {mobileMenu ? <MdClose onClick={() => handleMobileMenu()} /> : <MdMenu onClick={() => handleMobileMenu()} />}</span> : <div className='menu'>
+        {mdScreen < 800 ? <span>
+          <span className='menuItem'><HiOutlineSearch onClick={handleSearchBar} className='searchBtn'/></span>
+          {mobileMenu ? <MdClose onClick={() => handleMobileMenu()} className='menuBtn'/> : <MdMenu onClick={() => handleMobileMenu()} className='menuBtn'/>}</span> : <div className='menu'>
           <span className='menuItem'>Movies</span>
           <span className='menuItem'>TV Shows</span>
-          <span className='menuItem'><HiOutlineSearch onClick={handleSearchBar}/></span>
+          <span className='menuItem'><HiOutlineSearch onClick={handleSearchBar} /></span>
         </div>}
       </div>
 
@@ -68,8 +82,8 @@ export default function Header() {
         <div className='menuItem'>TV Shows</div>
       </div>
       <div className={`searchBar ${showSearchBar}`}>
-        <input type="text" placeholder='Search for a movie or tv show....'/>
-        <MdClose onClick={() => setShowSearchBar('hideSearchBar')} color='black' style={{cursor:"pointer"}}/>
+        <input type="text" placeholder='Search for a movie or tv show....' />
+        <MdClose onClick={handleMdClose} color='black' style={{ cursor: "pointer" }} />
       </div>
     </div>
 

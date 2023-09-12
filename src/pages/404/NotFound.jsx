@@ -3,7 +3,7 @@ import './style.scss'
 
 export default function NotFound() {
   return (
-    <div>
+    <div className='main'>
     NotFound
     </div>
   )

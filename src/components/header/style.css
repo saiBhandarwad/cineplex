@@ -26,7 +26,13 @@
     cursor: pointer;
     color: white;
 }
-.menuItem:hover{
+.menuBtn, .searchBtn{
+    cursor: pointer;
+    color: white;
+    font-size: x-large;
+}
+
+.menuItem:hover, .menuBtn:hover{
     color: rgb(255, 65, 65);
 }
 .menu {
@@ -34,7 +40,7 @@
     align-items: center;
 }
 .show{
-    background: rgba(0, 0, 0, 1) ;
+    background:#020c1b ;
 }
 .hide{
     transform: translateY(-70px);
@@ -46,7 +52,7 @@
 }
 .mobileMenu{
     border-top: 1px solid rgb(109, 109, 109);
-    background: #000000;
+    background: #020c1b;
     transition: all 0.3s ease-in-out;
 }
 .hideMobileMenu{

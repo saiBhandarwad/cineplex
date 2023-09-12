@@ -1,0 +1,97 @@
+.detailsContainer{
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999 !important;
+}
+.bgImage{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: -15px;
+    opacity: 0.25 !important;
+    z-index: -9999 !important;
+
+}
+.detailsContainer .details{
+    width: 70vw;
+    display: flex;
+    padding: 8em 0;
+    margin: 0 auto;
+    
+}
+.details Img{
+    height: 70vh;
+    width: 22vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+.rightContainer{
+    padding: 35px 0 0 20px;
+    margin: 0 0 0 50px;
+    z-index: 9999 !important;
+}
+.detailsContainer .title{
+    font-size: xx-large;
+}
+.genreDetails{
+    margin-left: 22px;
+}
+.genreNameDetails{
+    background-image: linear-gradient(45deg,#ee4e73,#de4266);
+    font-size: small;
+    font-weight: 100;
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    display: inline;
+}
+
+.detailsContainer .circleRating {
+   
+    height: 80px;
+    width: 80px;
+    background-color: var(--black); 
+    border-radius: 50%;
+    padding: 2px;
+    .CircularProgressbar-text {
+        font-size: 34px;
+        font-weight: 700;
+        fill: white;
+    }
+}
+.flex{
+    display: flex;
+    margin: 30px 0 0 20px;
+}
+.headingOverview{
+    font-size: x-large;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.overView{
+    margin: 30px 20px;
+}
+.overviewText{
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+}
+.extras{
+    display: flex;
+    gap: 0 10px;
+    margin-left: 20px;
+}
+.extras  span{
+    color: rgb(124, 134, 130);
+}
+hr{
+    margin-top: 10px;
+    border-color: rgba(100, 100, 100, 0.467);
+   
+}
+.director, .writer{
+    margin: 20px 0 20px 20px;
+}

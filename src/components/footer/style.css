@@ -1,0 +1,23 @@
+.container{
+    min-height: 35vh;
+    background: #080c22;
+}
+.headList{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 0 25px 0;
+}
+.description{
+    width: 52vw;
+    margin: auto;
+    line-height: 20px;
+    color: rgb(108, 108, 131);
+}
+.icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    justify-content: center;
+    font-size: xx-large;
+}

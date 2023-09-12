@@ -15,7 +15,7 @@ export default function HeroBanner() {
 
   useEffect(() => {
     const bg = url.backdrop + data?.results[Math.floor(Math.random() * 20)]?.backdrop_path
-    setBackground(bg)
+    setBackground(bg ? bg : '')
   }, [data])
 
 
@@ -29,7 +29,8 @@ export default function HeroBanner() {
     <>
       <div className="heroBanner">
         {!loading && <div className='backdropImg'>
-          <img src={background} alt="" loading='lazy'/>
+          <img src={background} />
+          
         </div>}
         <ContentWrapper>
           <div className='heroText'>

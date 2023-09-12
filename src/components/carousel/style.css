@@ -1,0 +1,196 @@
+.carousel{
+    display: flex;
+    height: 65vh;
+    width: 82.5vw;
+    margin: 0 auto 0.5em auto;
+}
+.carouselItem Img{
+    height: 45vh;
+    margin: 1em 0.62em;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 9999;
+}
+.loadingSkeleton{
+    height: 45vh;
+}
+.skCarousel{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 78vw;
+    margin: 0.5em auto;
+    
+}
+.skImage{
+    height: 45vh;
+    width: 15vw;
+    margin: 1em 0.6em;
+    border-radius: 1em;
+    cursor: pointer;
+    background: linear-gradient(rgb(51, 38, 82),rgb(37, 37, 65));
+    
+}
+.skTitle{
+    background: linear-gradient(rgb(51, 38, 82),rgb(37, 37, 65)); 
+    height: 1em;
+    width: 10em;
+    margin: 0.25em 0 0.5em 0.6em;
+}
+.skDate{
+    background: linear-gradient(rgb(51, 38, 82),rgb(37, 37, 65)); 
+    height: 1em;
+    width: 5em;
+    margin: 0.25em 0 0.5em 0.6em;
+}
+.imageWave{
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(rgb(51, 38, 82,0.7),rgb(37, 37, 65, 0.1));
+    border-radius: 1em 0 0 1em;
+    animation: wave 1s ease-in-out infinite both;
+}
+.titleWave{
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(rgb(51, 38, 82,0.7),rgb(37, 37, 65, 0.1));
+    border-radius: 1em 0 0 1em;
+    animation: wave 1s ease-in-out infinite both;
+}
+.dateWave{
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(rgb(51, 38, 82,0.7),rgb(37, 37, 65, 0.1));
+    border-radius: 1em 0 0 1em;
+    animation: wave 1s ease-in-out infinite both;
+}
+.carouselItems{
+    display: flex;
+    overflow: hidden;
+}
+.carouselItem{
+    text-align: start;
+}
+.title{
+    font-size: larger;
+    letter-spacing: 1px;
+    margin: 0 0.8em;
+    position: relative;
+    top: -30px;
+}
+.date{
+    font-size: 400;
+    color: rgb(108, 108, 131);
+    font-weight: 500;
+    margin: 0.5em 0.8em;
+    position: relative;
+    top: -30px;
+}
+.leftArrow{
+    font-size: xx-large;
+    position: relative;
+    top: 180px;
+    left: 50px;
+    cursor: pointer;
+    opacity: 0.7;
+    color: black;
+    z-index: 3;
+}
+.rightArrow{
+    font-size: xx-large;
+    position: relative;
+    top: 180px;
+    right: 50px;
+    cursor: pointer;
+    opacity: 0.7;
+    color: black;
+    z-index: 3;
+}
+.hideArrow{
+    display: none;
+}
+.leftArrow:hover, .rightArrow:hover{
+    opacity: 0.9;
+}
+.ratingGenre{
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -45px;
+    left: 10px;
+    padding: 0 5px;
+}
+.circleRating {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /* flex-shrink: 0; */
+}
+.genreName{
+    background: #000;
+    color: white;
+}
+@keyframes wave {
+    from{
+        transform: translate(0%);
+        border-radius: 1em 0 0 1em;
+    }to{
+        transform: translate(900%);
+        border-radius: 1em;
+    }
+}
+@media screen and (max-width:1168px) {
+    .carouselItems{
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+}
+@media screen and (max-width:500px) {
+    .carouselItem Img{
+        height: 30vh;
+        margin: 1em 0.62em;
+    }
+    .carouselItem{
+        width: 140px;
+        height: 160px;
+    }
+    .carousel{
+        overflow: hidden;
+        height: 50vh;
+        width: 95vw;
+        margin: 0 auto;
+    }
+    .circleRating {
+        width: 40px;
+        height: 40px;
+    }
+    .title, .date{
+        font-size: small;
+    }
+    .skCarousel{
+        height: 35vh;
+        width: 78vw;
+        margin: 0.5em auto;
+        
+    }
+    .skImage{
+        overflow: hidden;
+        height: 189px;
+        width: 126px;
+        margin: 0.5em 0.5em;
+        
+    }
+    .skTitle{
+        height: 0.5em;
+        width: 7em;
+        margin: 0.25em 0 0.5em 0.6em;
+    }
+    .skDate{
+        height: 0.5em;
+        width: 5em;
+        margin: 0.25em 0 0.5em 0.6em;
+    }
+}
